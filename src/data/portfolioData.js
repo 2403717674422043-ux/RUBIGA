@@ -13,6 +13,7 @@ export const personalInfo = {
   phone: "+91 90879 56451",
   linkedin: "https://linkedin.com/in/rubiga-r-k",
   github: "https://github.com/rubiga-rk",
+  resumePdf: "/assets/Rubiga_RK_CV.pdf",
   profileImage: profilePic,
   tagline: "Bridging Artificial Intelligence, Data Science & User-Centered Visual Design.",
   bio: "M.Sc. AI & ML postgraduate student at Coimbatore Institute of Technology with a strong interest in Machine Learning, Generative AI (RAG), Full-Stack Engineering, and minimalist UI/UX Design. Passionate about building data-driven intelligent solutions wrapped in thoughtful, intuitive interfaces.",

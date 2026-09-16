@@ -1,22 +1,27 @@
 import React from 'react';
-import { BookOpen, GraduationCap, Award, Compass, Heart, Users, MessageSquare, ShieldCheck, Zap } from 'lucide-react';
+import { BookOpen, GraduationCap, Award, Compass, Heart, Users, MessageSquare, ShieldCheck, Zap, Leaf } from 'lucide-react';
 import { personalInfo, softSkills } from '../data/portfolioData';
 
 export default function About() {
   return (
-    <section id="about" className="py-20 md:py-28 bg-white relative">
-      <div className="max-w-6xl mx-auto px-6 sm:px-8">
+    <section id="about" className="py-20 md:py-28 bg-white relative overflow-hidden">
+      
+      {/* Background Watercolor Wash */}
+      <div className="absolute top-1/4 right-0 w-[450px] h-[450px] watercolor-blob-sage pointer-events-none rounded-full opacity-40"></div>
+      <div className="absolute bottom-10 left-0 w-[400px] h-[400px] watercolor-blob-lavender pointer-events-none rounded-full opacity-35"></div>
+
+      <div className="max-w-6xl mx-auto px-6 sm:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-start space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ice-50 border border-ice-200 text-xs font-semibold text-ice-700 uppercase tracking-wider">
-            <Compass className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sage-100/80 border border-sage-200 text-xs font-semibold text-sage-700 uppercase tracking-wider">
+            <Leaf className="w-3.5 h-3.5 text-sage-600" />
             <span>About Me</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900">
             Blending Machine Intelligence with Creative Design
           </h2>
-          <div className="w-12 h-1 bg-ice-400 rounded-full"></div>
+          <div className="w-12 h-1 bg-gradient-to-r from-ice-400 to-sage-400 rounded-full"></div>
         </div>
 
         {/* Content Layout Grid */}
@@ -36,10 +41,10 @@ export default function About() {
               </p>
             </div>
 
-            {/* Quick Core Strengths Grid */}
+            {/* Core Strengths Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-ice-200 transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-ice-100 flex items-center justify-center text-ice-600 mb-3">
+              <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-ice-300 transition-all duration-300 shadow-xs">
+                <div className="w-9 h-9 rounded-xl bg-ice-100 flex items-center justify-center text-ice-600 mb-3">
                   <Zap className="w-4 h-4" />
                 </div>
                 <h3 className="font-semibold text-slate-900 text-sm mb-1">Analytical Rigor</h3>
@@ -48,8 +53,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 hover:border-ice-200 transition-colors">
-                <div className="w-8 h-8 rounded-lg bg-ice-100 flex items-center justify-center text-ice-600 mb-3">
+              <div className="p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-sage-300 transition-all duration-300 shadow-xs">
+                <div className="w-9 h-9 rounded-xl bg-sage-100 flex items-center justify-center text-sage-600 mb-3">
                   <Heart className="w-4 h-4" />
                 </div>
                 <h3 className="font-semibold text-slate-900 text-sm mb-1">Human-Centered UI</h3>
@@ -64,15 +69,13 @@ export default function About() {
           <div className="lg:col-span-5 space-y-6">
             
             {/* Education Card */}
-            <div className="p-6 rounded-3xl bg-gradient-to-br from-ice-50/80 via-white to-slate-50 border border-sky-100 shadow-ice-card relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-ice-100/40 rounded-full blur-2xl pointer-events-none"></div>
-              
+            <div className="p-6 rounded-3xl bg-gradient-to-br from-ice-50/90 via-white to-sage-50/50 border border-sky-100/90 shadow-watercolor relative overflow-hidden">
               <div className="flex items-start gap-4 mb-4">
-                <div className="p-3 rounded-xl bg-ice-500 text-white shadow-sm">
+                <div className="p-3 rounded-xl bg-slate-900 text-ice-200 shadow-sm">
                   <GraduationCap className="w-6 h-6" />
                 </div>
                 <div>
-                  <span className="text-xs font-bold text-ice-600 uppercase tracking-wider">Education</span>
+                  <span className="text-xs font-bold text-sage-600 uppercase tracking-wider">Education</span>
                   <h3 className="text-lg font-bold text-slate-900 leading-tight">
                     {personalInfo.institution}
                   </h3>
@@ -103,7 +106,7 @@ export default function About() {
             </div>
 
             {/* Soft Skills & Interests */}
-            <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-xs space-y-4">
+            <div className="p-6 rounded-3xl bg-white/90 border border-slate-200/80 shadow-xs space-y-4">
               <div className="flex items-center gap-2">
                 <Users className="w-4 h-4 text-ice-500" />
                 <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
@@ -115,7 +118,7 @@ export default function About() {
                 {softSkills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-ice-50 border border-slate-200/80 text-xs font-medium text-slate-700 transition-colors"
+                    className="px-3 py-1.5 rounded-lg bg-slate-50 hover:bg-sage-50 border border-slate-200/80 hover:border-sage-200 text-xs font-medium text-slate-700 transition-colors"
                   >
                     {skill}
                   </span>

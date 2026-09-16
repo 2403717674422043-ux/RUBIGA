@@ -4,49 +4,64 @@
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-800 antialiased selection:bg-ice-200 selection:text-slate-900;
+    @apply bg-[#edf7fc] text-slate-900 antialiased selection:bg-ice-200 selection:text-slate-900 overflow-x-hidden;
   }
 }
 
-/* Custom Glassmorphism & Accent Utilities */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(224, 242, 254, 0.8);
+/* Organic Watercolor Washes across Page */
+.watercolor-shape-1 {
+  background: radial-gradient(ellipse at center, rgba(186, 230, 253, 0.7) 0%, rgba(163, 177, 138, 0.35) 50%, rgba(243, 232, 255, 0.25) 75%, transparent 100%);
+  filter: blur(80px);
 }
 
-.glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.watercolor-shape-2 {
+  background: radial-gradient(ellipse at center, rgba(125, 211, 252, 0.6) 0%, rgba(211, 232, 218, 0.4) 50%, rgba(233, 213, 255, 0.25) 80%, transparent 100%);
+  filter: blur(85px);
 }
 
-.glass-panel-hover:hover {
-  background: rgba(255, 255, 255, 0.9);
-  border-color: rgba(56, 189, 248, 0.4);
-  box-shadow: 0 12px 30px -10px rgba(2, 132, 199, 0.12);
-  transform: translateY(-2px);
+.watercolor-shape-3 {
+  background: radial-gradient(ellipse at center, rgba(243, 232, 255, 0.6) 0%, rgba(186, 230, 253, 0.45) 50%, transparent 80%);
+  filter: blur(90px);
 }
 
-.ice-gradient-bg {
-  background: radial-gradient(circle at 50% 0%, rgba(224, 242, 254, 0.6) 0%, rgba(248, 250, 252, 0) 70%);
+/* Organic Hero Photo Backdrop Shapes */
+.hero-organic-blob-1 {
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  background: linear-gradient(135deg, rgba(186, 230, 253, 0.85) 0%, rgba(163, 177, 138, 0.5) 60%, rgba(243, 232, 255, 0.35) 100%);
 }
 
-.ice-glow-orb {
-  background: radial-gradient(circle, rgba(186, 230, 253, 0.45) 0%, rgba(56, 189, 248, 0.15) 50%, rgba(255, 255, 255, 0) 70%);
-  filter: blur(40px);
+.hero-organic-blob-2 {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  background: linear-gradient(135deg, rgba(211, 232, 218, 0.75) 0%, rgba(125, 211, 252, 0.6) 100%);
 }
 
-/* Subtle Custom Scrollbar */
+/* Floating Glass Cards */
+.editorial-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(186, 230, 253, 0.8);
+  box-shadow: 0 15px 35px -10px rgba(2, 132, 199, 0.09), 0 5px 15px -5px rgba(132, 169, 140, 0.07);
+}
+
+.editorial-card:hover {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(132, 169, 140, 0.5);
+  box-shadow: 0 22px 45px -12px rgba(2, 132, 199, 0.15), 0 8px 20px -6px rgba(132, 169, 140, 0.1);
+  transform: translateY(-3px);
+}
+
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f8fafc;
+  background: #edf7fc;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #38bdf8;
   border-radius: 4px;
 }
 

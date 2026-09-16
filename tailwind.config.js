@@ -19,6 +19,24 @@ export default {
           800: '#0c4a6e',
           900: '#0a3650',
         },
+        sage: {
+          50: '#f4f8f5',
+          100: '#e9f5ec',
+          200: '#d3e8da',
+          300: '#a3b18a',
+          400: '#84a98c',
+          500: '#52796f',
+          600: '#354f52',
+          700: '#2f3e46',
+        },
+        lavender: {
+          50: '#faf5ff',
+          100: '#f3e8ff',
+          200: '#e9d5ff',
+          300: '#d8b4fe',
+          400: '#c084fc',
+          500: '#a855f7',
+        },
         slate: {
           50: '#f8fafc',
           100: '#f1f5f9',
@@ -34,12 +52,25 @@ export default {
       },
       fontFamily: {
         sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-        serif: ['"Playfair Display"', 'serif'],
       },
       boxShadow: {
-        'ice-glow': '0 0 25px -5px rgba(56, 189, 248, 0.15)',
-        'ice-card': '0 10px 30px -10px rgba(2, 132, 199, 0.08)',
-        'glass': '0 8px 32px 0 rgba(14, 165, 233, 0.06)',
+        'ice-glow': '0 0 30px -5px rgba(56, 189, 248, 0.2)',
+        'sage-glow': '0 0 30px -5px rgba(132, 169, 140, 0.2)',
+        'watercolor': '0 20px 40px -15px rgba(2, 132, 199, 0.08), 0 10px 20px -10px rgba(132, 169, 140, 0.06)',
+      },
+      keyframes: {
+        floatSlow: {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(-12px) rotate(1.5deg)' },
+        },
+        floatSlowAlt: {
+          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+          '50%': { transform: 'translateY(10px) rotate(-1.5deg)' },
+        },
+      },
+      animation: {
+        'float-slow': 'floatSlow 14s ease-in-out infinite',
+        'float-slow-alt': 'floatSlowAlt 18s ease-in-out infinite',
       },
     },
   },
